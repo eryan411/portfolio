@@ -1,4 +1,4 @@
-# portfolio
+# My Portfolio
 This is a personal portfolio of mine, still currently a work in progress. Created using HTML, CSS, React, JS
 
 ## Design System
