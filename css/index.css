@@ -6,7 +6,9 @@
     --clr-gray: 186, 18%, 42%;
 
     --fs-900: 9.375rem;
+    --fs-850: 7.75rem;
     --fs-800: 6.25rem;
+    --fs-775: 5rem;
     --fs-750: 4.5rem;
     --fs-700: 3.5rem;
     --fs-600: 2rem;
@@ -129,6 +131,10 @@ select {
   border: 0;
 }
 
+.center-text{
+    text-align: center;
+}
+
 .letter-spacing-1 { letter-spacing: 4.75px; } 
 .letter-spacing-2 { letter-spacing: 2.7px; } 
 .letter-spacing-3 { letter-spacing: 2.35px; } 
@@ -136,7 +142,9 @@ select {
 .uppercase { text-transform: uppercase; }
 
 .fs-900 { font-size: var(--fs-900); }
+.fs-850 { font-size: var(--fs-850); }
 .fs-800 { font-size: var(--fs-800); }
+.fs-775 { font-size: var(--fs-775); }
 .fs-750 { font-size: var(--fs-750); }
 .fs-700 { font-size: var(--fs-700); }
 .fs-600 { font-size: var(--fs-600); }
@@ -282,7 +290,7 @@ body, html{
     margin-top: 10px;
 }
 
-.navbar-list{
+.navbar-list, .about-me-navbar-list{
     list-style: none;
     flex-direction: row;
     justify-content: space-between;
@@ -290,11 +298,16 @@ body, html{
     padding-left: 0;
 }
 
-.navbar-list > li > a{
+.navbar-list > li > a, .about-me-navbar-list > li > a{
     text-decoration: none;
 }
 
-.hero-container, .about-me, .navbar{
+.navbar-list> li> a:hover,
+.navbar-list> li> a:focus{
+    border-bottom: 2px solid hsl(var(--clr-primary));
+}
+
+.hero-container, .about-me-div, .what-I-offer-container, .navbar{
     margin-inline: 5%;
 }
 
@@ -348,6 +361,10 @@ body, html{
         text-align: center;
     }
 
+    .hero-intro{
+        font-size: var(--fs-850);
+    }
+
     .contact-btn{
         width: 100%;
         justify-content: center;
@@ -355,5 +372,98 @@ body, html{
 
     .socials-container{
         width: 100%;
+    }
+}
+
+/* -------------- */
+/* ---About Me--- */
+/* -------------- */
+
+.about-me-navbar{
+    margin-inline: 10%;
+}
+
+.new-background{
+    background-color: hsl(var(--clr-white));
+}
+
+.about-me-navbar-list> li> a:hover,
+.about-me-navbar-list> li> a:focus{
+    border-bottom: 2px solid hsl(var(--clr-gray));
+}
+
+.about-me-div, .what-I-offer-container, .tools-container{
+    padding: 10% 10%;
+}
+
+.what-I-offer-container{
+    flex-direction: column;
+    gap: 50px;
+}
+
+.about-me-intro-title, .what-I-offer-title, .tools-I-work-with-title{
+    padding-top: 15%;
+    text-shadow: 5px 5px hsl(var(--clr-black));
+}
+
+.what-I-offer-text{
+    padding-top: 20px;
+}
+
+.parallax-one, .parallax-two, .parallax-three{
+    
+    /* Set a specific height */
+    min-height: 500px;
+    
+    width: 100%;
+    
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax-one{
+    /* The image used */
+    background-image: url(/Portfolio/img/Photo\ 1.jpg);
+}
+
+.parallax-two{
+    /* The image used */
+    background-image: url(/Portfolio/img/Photo\ 2.jpg);
+}
+
+.parallax-three{
+    background-image: url(/Portfolio/img/Photo\ 3.jpg);
+}
+
+.tools-container{
+    flex-direction: column;
+    padding-top: 40px;
+}
+
+.tools-lists > ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+@media (min-width: 890px){
+    .about-me-intro-title{
+        padding-top: 150px;
+    }
+    .what-I-offer-title, .tools-I-work-with-title{
+        padding-top: 200px;
+    }
+    .what-I-offer-container{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .what-I-offer-block{
+        width: 40%;
+    }
+    .tools-container{
+        flex-direction: row;
+        justify-content: space-evenly;
     }
 }
