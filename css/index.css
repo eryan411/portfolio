@@ -290,6 +290,10 @@ body, html{
     margin-top: 10px;
 }
 
+.about-me-navbar-list{
+    padding-top: 10px;
+}
+
 .navbar-list, .about-me-navbar-list{
     list-style: none;
     flex-direction: row;
@@ -380,7 +384,7 @@ body, html{
 /* -------------- */
 
 .about-me-navbar{
-    margin-inline: 10%;
+    margin-inline: 5%;
 }
 
 .new-background{
@@ -403,7 +407,7 @@ body, html{
 
 .about-me-intro-title, .what-I-offer-title, .tools-I-work-with-title{
     padding-top: 15%;
-    text-shadow: 5px 5px hsl(var(--clr-black));
+    text-shadow: 5px 5px hsl(var(--clr-gray));
 }
 
 .what-I-offer-text{
@@ -449,6 +453,7 @@ body, html{
 }
 
 @media (min-width: 890px){
+    
     .about-me-intro-title{
         padding-top: 150px;
     }
