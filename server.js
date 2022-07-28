@@ -2,13 +2,35 @@ const express = require('express')
 const app = express()
 const PORT = 8000
 
+app.set('view engine', 'ejs')
+app.use(express.static('public'))
+app.use(express.static('public/img'))
+app.use(express.urlencoded({ extended: true }))
+app.use(express.json())
+
 app.use((req, res, next) => {
     console.log(`URL: ${req.url}`);
     next();
 })
 
 app.get('/', (req, res) => {
-    res.status(200).sendFile(__dirname + '/index.html')
+    res.render('index.ejs')
+})
+
+app.get('/work', (req, res) => {
+    res.render('work.ejs')
+})
+
+app.get('/about-me', (req, res) => {
+    res.render('about-me.ejs')
+})
+
+app.get('/skills', (req, res) => {
+    res.render('skills.ejs')
+})
+
+app.get('/design-system', (req, res) => {
+    res.render('design-system.ejs')
 })
 
 app.get('/member/:name', (req, res) => {

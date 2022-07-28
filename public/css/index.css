@@ -451,16 +451,16 @@ body, html{
 
 .parallax-one{
     /* The image used */
-    background-image: url(/Portfolio/img/Photo\ 1.jpg);
+    background-image: url(/img/Photo\ 1.jpg);
 }
 
 .parallax-two{
     /* The image used */
-    background-image: url(/Portfolio/img/Photo\ 2.jpg);
+    background-image: url(/img/Photo\ 2.jpg);
 }
 
 .parallax-three{
-    background-image: url(/Portfolio/img/Photo\ 3.jpg);
+    background-image: url(/img/Photo\ 3.jpg);
 }
 
 .tools-container{
