@@ -1,5 +1,5 @@
-# My Portfolio
-This is a personal portfolio of mine, still currently a work in progress. Created using HTML, CSS, React, JS
+#This is the portfolio for Eric Ryan
 
-## Design System
-Design system inspired by Kevin Powell's course https://scrimba.com/learn/spacetravel
+#Built using Node, Express, EJS, and CSS
+
+#Thanks to Kevin Powell for the design system, inspired by his design system in the space travel tutorial: https://scrimba.com/learn/spacetravel
