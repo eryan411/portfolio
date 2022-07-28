@@ -41,6 +41,4 @@ app.get('*', (req, res, next) => {
     next();
 })
 
-app.listen(process.env.PORT || 8000, () =>{
-    console.log(`Server running! Check either ${process.env.PORT} or 8000`)
-})
+app.listen(process.env.PORT || 8000)
