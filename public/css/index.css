@@ -1,0 +1,530 @@
+:root{
+    --clr-primary: 47, 73%, 58%;
+    --clr-accent: 336, 91%, 65%;
+    --clr-black: 202, 6%, 24%;
+    --clr-white: 38, 8%, 81%;
+    --clr-gray: 186, 18%, 42%;
+
+    --fs-900: 9.375rem;
+    --fs-850: 7.75rem;
+    --fs-800: 6.25rem;
+    --fs-775: 5rem;
+    --fs-750: 4.5rem;
+    --fs-700: 3.5rem;
+    --fs-600: 2rem;
+    --fs-500: 1.75rem;
+    --fs-400: 1.125rem;
+    --fs-300: 1rem;
+    --fs-200: 0.875rem;
+
+    --font: 'Raleway', sans-serif;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+figure,
+blockquote,
+dl,
+dd,
+li {
+  margin: 0;
+  font-family: var(--font);
+  color: hsl(var(--clr-white));
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ------------------- */
+/* Utility classes     */
+/* ------------------- */
+
+/* general */
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap, 1rem);
+}
+
+.flow > *:where(:not(:first-child)) {
+    margin-top: var(--flow-space, 1rem);
+}
+
+.sr-only {
+  position: absolute; 
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px; 
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
+
+.center-text{
+    text-align: center;
+}
+
+.letter-spacing-1 { letter-spacing: 4.75px; } 
+.letter-spacing-2 { letter-spacing: 2.7px; } 
+.letter-spacing-3 { letter-spacing: 2.35px; } 
+
+.uppercase { text-transform: uppercase; }
+
+.fs-900 { font-size: var(--fs-900); }
+.fs-850 { font-size: var(--fs-850); }
+.fs-800 { font-size: var(--fs-800); }
+.fs-775 { font-size: var(--fs-775); }
+.fs-750 { font-size: var(--fs-750); }
+.fs-700 { font-size: var(--fs-700); }
+.fs-600 { font-size: var(--fs-600); }
+.fs-500 { font-size: var(--fs-500); }
+.fs-400 { font-size: var(--fs-400); }
+.fs-300 { font-size: var(--fs-300); }
+.fs-200 { font-size: var(--fs-200); }
+
+.fs-900,
+.fs-800,
+.fs-700,
+.fs-600 {
+    line-height: 1.1;
+}
+
+body{
+    background-color: hsl(var(--clr-gray));
+}
+
+.primary-background{
+    background-color: hsl(var(--clr-primary));
+}
+
+.accent-background{
+    background-color: hsl(var(--clr-accent));
+}
+
+.black-background{
+    background-color: hsl(var(--clr-black));
+}
+
+.white-background{
+    background-color: hsl(var(--clr-white));
+}
+
+.gray-background{
+    background-color: hsl(var(--clr-gray));
+}
+
+.primary-text{
+    color: hsl(var(--clr-primary));
+}
+
+.accent-text{
+    color: hsl(var(--clr-accent));
+}
+
+.black-text{
+    color: hsl(var(--clr-black));
+}
+
+.white-text{
+    color: hsl(var(--clr-white));
+}
+
+.gray-text{
+    color: hsl(var(--clr-gray));
+}
+
+/* ------------------- */
+/* ---Design System--- */
+/* ------------------- */
+
+.design-system{
+    padding-inline: 10%;
+}
+
+.intro-heading{
+    padding: 2rem;
+    text-shadow: 0 0 2px black;
+}
+
+.section-intro{
+    padding: 1em;
+}
+
+.return-text{
+    padding: 1.75em;
+}
+
+.section-intro > span {
+    padding-right: 10px;
+}
+
+.opacity-span{
+    opacity: 50%;
+    font-weight: bold;
+}
+
+.colors{
+    margin-inline: 10%;
+    gap: 5%;
+    justify-content: center;
+}
+
+.color-desc{
+    min-width: 200px;
+    padding: 10px;
+}
+
+.gray-desc{
+    border: 5px solid hsl(var(--clr-black));
+}
+
+.palette{
+    display: flex;
+
+    font-size: var(--fs-600);
+    
+    aspect-ratio: 2/1;
+    padding: 5% 20%;
+    
+    min-width: 200px;
+    
+    border: 1px solid hsl(var(--clr-dark));
+}
+
+.typography-col > h5{
+    margin-top: 20px;
+    line-height: 1.1;
+}
+
+.typography-col > span{
+    display: block;
+    margin-top: 20px;
+}
+
+@media (max-width:1100px){
+    .colors{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .color-desc{
+        min-width: 200px;
+    }
+
+    .container{
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+}
+
+/* ----------- */
+/* ---Index--- */
+/* ----------- */
+
+body, html{
+    margin: 0;
+    padding: 0;
+}
+
+#vanta{
+    z-index: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.navbar{
+    margin-top: 10px;
+}
+
+.about-me-navbar-list{
+    padding-top: 10px;
+}
+
+.navbar-list, .about-me-navbar-list{
+    list-style: none;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 0;
+    padding-left: 0;
+}
+
+.navbar-list > li > a, .about-me-navbar-list > li > a{
+    text-decoration: none;
+}
+
+.navbar-list> li> a:hover,
+.navbar-list> li> a:focus{
+    border-bottom: 2px solid hsl(var(--clr-primary));
+}
+
+.hero-container, .about-me-div, .what-I-offer-container, .navbar{
+    margin-inline: 5%;
+}
+
+.hero-container, .about-me-div, .navbar{
+    flex-direction: column;
+}
+
+.hero-container{
+    padding-top: 10%;
+    height: 80vh;
+    gap: 50px;
+    margin-bottom: 10%;
+}
+
+.hero-container > h1{
+    margin-top: 0;
+}
+
+.contact-btn{
+    margin-top: 2%;
+    width: 20%;
+    display: grid;
+    border: none;
+    background: none;
+    transition: border-width cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.contact-btn > a{
+    text-decoration: none;
+    color: hsl(var(--clr-white));
+}
+
+.contact-btn:hover,
+.contact-btn:focus{
+    border-bottom: 5px solid hsl(var(--clr-primary));
+}
+
+.socials-container{
+    margin-top: 2%;
+    width: 80vw;
+    gap: 5%;
+}
+
+.socials > a{
+    text-decoration: none;
+    color: hsl(var(--clr-primary));
+}
+
+@media (max-width:440px){
+    .hero-container{
+        text-align: center;
+    }
+
+    .hero-intro{
+        font-size: var(--fs-850);
+    }
+
+    .contact-btn{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .socials-container{
+        width: 100%;
+    }
+}
+
+/* -------------- */
+/* ---About Me--- */
+/* -------------- */
+
+.about-me-navbar{
+    margin-inline: 5%;
+}
+
+.new-background{
+    background-color: hsl(var(--clr-white));
+}
+
+.about-me-navbar-list> li> a:hover,
+.about-me-navbar-list> li> a:focus{
+    border-bottom: 2px solid hsl(var(--clr-gray));
+}
+
+.about-me-div, .what-I-offer-container, .tools-container{
+    padding: 10% 10%;
+}
+
+.what-I-offer-container{
+    flex-direction: column;
+    gap: 50px;
+}
+
+.about-me-intro-title, .what-I-offer-title, .tools-I-work-with-title{
+    padding-top: 15%;
+    text-shadow: 5px 5px hsl(var(--clr-gray));
+}
+
+.what-I-offer-text{
+    padding-top: 20px;
+}
+
+.parallax-one, .parallax-two, .parallax-three{
+    
+    /* Set a specific height */
+    min-height: 500px;
+    
+    width: 100%;
+    
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax-one{
+    /* The image used */
+    background-image: url(/img/Photo\ 1.jpg);
+}
+
+.parallax-two{
+    /* The image used */
+    background-image: url(/img/Photo\ 2.jpg);
+}
+
+.parallax-three{
+    background-image: url(/img/Photo\ 3.jpg);
+}
+
+.tools-container{
+    flex-direction: column;
+    padding-top: 40px;
+}
+
+.tools-lists > ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+@media (min-width: 890px){
+    
+    .about-me-intro-title{
+        padding-top: 150px;
+    }
+    .what-I-offer-title, .tools-I-work-with-title{
+        padding-top: 200px;
+    }
+    .what-I-offer-container{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .what-I-offer-block{
+        width: 40%;
+    }
+    .tools-container{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
+/* ---------- */
+/* ---Work--- */
+/* ---------- */
+
+.work-intro-title{
+    padding-top: 5%;
+    text-shadow: 5px 5px hsl(var(--clr-accent));
+}
+
+.work-intro-title, .project-list{
+    padding-inline: 10%;
+}
+
+.project-list{
+    justify-content: space-around;
+    padding-top: 50px;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.secondary-container, .container-template{
+    padding: 10px;
+    border-radius: 10px;
+}
+
+@media (min-width: 700px){
+    .work-intro-title{
+        font-size: var(--fs-900);
+    }
+
+    .project-list{
+        flex-direction: row;
+    }
+}
