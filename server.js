@@ -1,6 +1,5 @@
 const express = require('express')
 const app = express()
-const PORT = process.env.PORT || 8000
 
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
@@ -42,6 +41,6 @@ app.get('*', (req, res, next) => {
     next();
 })
 
-app.listen(PORT, () =>{
-    console.log(`Server running on ${PORT}`)
+app.listen(process.env.PORT || 8000, () =>{
+    console.log(`Server running! Check either ${process.env.PORT} or 8000`)
 })
