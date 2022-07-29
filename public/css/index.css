@@ -528,3 +528,8 @@ body, html{
         flex-direction: row;
     }
 }
+
+.under-construction{
+    display: flex;
+    justify-content: center;
+}
