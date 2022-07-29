@@ -32,6 +32,14 @@ app.get('/design-system', (req, res) => {
     res.render('design-system.ejs')
 })
 
+app.get('/skills', (req, res) => {
+    res.render('skills.ejs')
+})
+
+app.get('/contact', (req, res) => {
+    res.render('contact.ejs')
+})
+
 app.get('/member/:name', (req, res) => {
     res.end(`Requested member with name: ${req.params.name}`)
 })
