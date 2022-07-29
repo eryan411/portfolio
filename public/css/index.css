@@ -523,6 +523,15 @@ body, html{
     border-radius: 10px;
 }
 
+.link-to-source-code{
+    text-decoration: none;
+}
+
+.link-to-source-code:hover,
+.link-to-source-code:focus{
+    text-decoration: underline;
+}
+
 .work-img-div{
     text-align: left;
     flex-direction: column;
@@ -530,17 +539,26 @@ body, html{
 }
 
 .work-img-div {
-    overflow: hidden; }
-    .work-img-div img {
-      -moz-transition: -moz-transform 0.2s ease;
-      -webkit-transition: -webkit-transform 0.2s ease;
-      -ms-transition: -ms-transform 0.2s ease;
-      transition: transform 0.2s ease; }
-    .work-img-div:hover img {
-      -moz-transform: scale(1.075);
-      -webkit-transform: scale(1.075);
-      -ms-transform: scale(1.075);
-      transform: scale(1.075); }
+    overflow: hidden; 
+}
+
+.work-img-div img {
+    -moz-transition: -moz-transform 0.2s ease;
+    -webkit-transition: -webkit-transform 0.2s ease;
+    -ms-transition: -ms-transform 0.2s ease;
+    transition: transform 0.2s ease; 
+}
+
+.work-img-div:hover img {
+    -moz-transform: scale(1.075);
+    -webkit-transform: scale(1.075);
+    -ms-transform: scale(1.075);
+    transform: scale(1.075); 
+}
+
+.tools-used-text{
+    margin-top: 15px;
+}
   
 
 @media (min-width: 700px){
@@ -549,7 +567,8 @@ body, html{
     }
 
     .project-list{
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: 40% 40%;
     }
 }
 
