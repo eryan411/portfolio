@@ -50,5 +50,6 @@ app.get('*', (req, res, next) => {
 })
 
 app.listen(process.env.PORT || 8000, () => {
+    console.log(process.env.PORT)
     console.log(`Your server is running on ${process.env.PORT}, better go catch it!`)
 })

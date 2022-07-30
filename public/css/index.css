@@ -567,8 +567,7 @@ body, html{
     }
 
     .project-list{
-        display: grid;
-        grid-template-columns: 40% 40%;
+        flex-direction: column;
     }
 }
 
