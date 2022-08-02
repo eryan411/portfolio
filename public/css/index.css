@@ -516,6 +516,7 @@ body, html{
     padding-top: 50px;
     flex-direction: column;
     gap: 50px;
+    margin-bottom: 20px;
 }
 
 .secondary-container, .container-template{
@@ -533,6 +534,7 @@ body, html{
 }
 
 .work-img-div{
+    margin-top: 10px;
     text-align: left;
     flex-direction: column;
     align-items: center;
